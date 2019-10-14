@@ -12,6 +12,8 @@ public class WebsocketClient : MonoBehaviour {
     public Dictionary<string, string> messages = new Dictionary<string, string>();
     public string ip_address;
 
+    private Queue<string> subscribeTasks = new Queue<string>();
+
     // Connect happens in Awake so it is finished before other GameObjects are made
     void Awake() {
         Debug.Log("instantiating websocket");
@@ -25,41 +27,51 @@ public class WebsocketClient : MonoBehaviour {
         ws.ConnectAsync();
     }
 
+    void Update()
+    {
+        if (connected && subscribeTasks.Count > 0)
+        {
+            var msg = subscribeTasks.Dequeue();
+            ws.SendAsync(msg, OnSendComplete);
+            Debug.Log($"message sent: {msg}");
+        }
+    }
+
     void OnApplicationQuit() {
         ws.CloseAsync();
     }
 
     public void Subscribe(string topic, string type, string compression, int throttle_rate) {
         string msg = "{\"op\":\"subscribe\",\"id\":\"subscribe:/" + topic + ":" + counter + "\",\"type\":\"" + type + "\",\"topic\":\"/" + topic + "\",\"compression\":\"" + compression + "\",\"throttle_rate\":" + throttle_rate.ToString() + ",\"queue_length\":0}";
-        Debug.Log(msg);
-        ws.SendAsync(msg, OnSendComplete);
+        Debug.Log($"push message to queue: {msg}");
+        subscribeTasks.Enqueue(msg);
         counter++;
     }
 
     public void Subscribe(string topic, string type, int throttle_rate) {
         string msg = "{\"op\":\"subscribe\",\"id\":\"subscribe:/" + topic + ":" + counter + "\",\"type\":\"" + type + "\",\"topic\":\"/" + topic + "\",\"throttle_rate\":" + throttle_rate.ToString() + ",\"queue_length\":0}";
-        Debug.Log(msg);
-        ws.Send(msg);
+        Debug.Log($"push message to queue: {msg}");
+        subscribeTasks.Enqueue(msg);
         counter++;
     }
 
     public void Unsubscribe(string topic) {
         string msg = "{\"op\":\"unsubscribe\",\"id\":\"unsubscribe:/" + topic + ":" + counter + "\",\"topic\":\"" + topic + "\"}";
-        Debug.Log(msg);
-        ws.SendAsync(msg, OnSendComplete);
+        Debug.Log($"push message to queue: {msg}");
+        subscribeTasks.Enqueue(msg);
     }
 
     public void Advertise(string topic, string type) {
         string msg = "{\"op\":\"advertise\",\"id\":\"advertise:/" + topic + ":" + counter + "\",\"type\":\"" + type + "\",\"topic\":\"/" + topic + "\",\"latch\":false,\"queue_size\":0}";
-        Debug.Log(msg);
-        ws.SendAsync(msg, OnSendComplete);
+        Debug.Log($"push message to queue: {msg}");
+        subscribeTasks.Enqueue(msg);
         counter++;
-
     }
 
     public void Publish(string topic, string message) {
         string msg = "{\"op\":\"publish\",\"id\":\"publish:/" + topic + ":" + counter + "\",\"topic\":\"/" + topic + "\",\"msg\":{\"data\":\"" + message + "\"},\"latch\":false}";
-        ws.SendAsync(msg, OnSendComplete);
+        Debug.Log($"push message to queue: {msg}");
+        subscribeTasks.Enqueue(msg);
         counter++;
     }
 
@@ -68,13 +80,14 @@ public class WebsocketClient : MonoBehaviour {
     }
 
     private void OnMessageHandler(object sender, MessageEventArgs e) {
+        // Debug.Log("OnMessageHandler()");
         string[] input = e.Data.Split(new char[] { ',' }, 2);
         string topic = input[0].Substring(12).Replace("\"", "");
         string data = input[1].Split(new string[] { "data" }, StringSplitOptions.None)[1];
+        // Debug.Log($"topic:{topic}, data(20):{data.Substring(0, 20)}");
         data = data.Substring(4);
         data = data.Split('"')[0];
         messages[topic] = data;
-        //Debug.Log(data);
     }
 
     private void OnOpenHandler(object sender, System.EventArgs e) {
@@ -84,10 +97,11 @@ public class WebsocketClient : MonoBehaviour {
 
     private void OnCloseHandler(object sender, CloseEventArgs e) {
         Debug.Log("WebSocket closed");
+        connected = false;
     }
 
     private void OnSendComplete(bool success) {
-        //Debug.Log("Message sent successfully? " + success);
+        Debug.Log("Message sent successfully? " + success);
     }
 
     public bool IsConnected() {

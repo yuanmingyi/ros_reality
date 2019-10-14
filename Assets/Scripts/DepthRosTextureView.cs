@@ -24,7 +24,7 @@ public class DepthRosTextureView : MonoBehaviour {
 		GetComponent<Renderer> ().material.mainTexture = texture;
 		GameObject wso = GameObject.FindWithTag ("WebsocketTag");
 		wsc = wso.GetComponent<WebsocketClient> ();
-		topic = "kinect2/sd/image_depth_rect";
+		topic = "/kinect2/sd/image_depth_rect";
 		wsc.Subscribe (topic, "sensor_msgs/Image", compression, framerate);
 	}
 	

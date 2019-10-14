@@ -1,9 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ros_reality", "Assembly-CSharp.csproj", "{07848C31-274A-F2A1-9AC8-DC2D0B95ED03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR", "SteamVR.csproj", "{70D963DF-BC5D-7BBF-7AEB-8478E149D3DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ros_reality", "Assembly-CSharp-Editor.csproj", "{9A20CF2C-F071-A3AF-A830-46EBE676D794}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{07848C31-274A-F2A1-9AC8-DC2D0B95ED03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR_Actions", "SteamVR_Actions.csproj", "{66C604C4-47F6-062A-66EE-EC5E5D4075BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR_Editor", "SteamVR_Editor.csproj", "{A3BC59DE-CD52-64D7-DD85-1AEA025FE7E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{9A20CF2C-F071-A3AF-A830-46EBE676D794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR_Input_Editor", "SteamVR_Input_Editor.csproj", "{A2C9320C-F32E-373B-3A09-4B0AF453FA90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamVR_Windows_EditorHelper", "SteamVR_Windows_EditorHelper.csproj", "{12F3FDD2-C79F-90E6-7D7C-B1AC5E2D72A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,19 +21,36 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70D963DF-BC5D-7BBF-7AEB-8478E149D3DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D963DF-BC5D-7BBF-7AEB-8478E149D3DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D963DF-BC5D-7BBF-7AEB-8478E149D3DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D963DF-BC5D-7BBF-7AEB-8478E149D3DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07848C31-274A-F2A1-9AC8-DC2D0B95ED03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07848C31-274A-F2A1-9AC8-DC2D0B95ED03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07848C31-274A-F2A1-9AC8-DC2D0B95ED03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07848C31-274A-F2A1-9AC8-DC2D0B95ED03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C604C4-47F6-062A-66EE-EC5E5D4075BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C604C4-47F6-062A-66EE-EC5E5D4075BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C604C4-47F6-062A-66EE-EC5E5D4075BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C604C4-47F6-062A-66EE-EC5E5D4075BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3BC59DE-CD52-64D7-DD85-1AEA025FE7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BC59DE-CD52-64D7-DD85-1AEA025FE7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BC59DE-CD52-64D7-DD85-1AEA025FE7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BC59DE-CD52-64D7-DD85-1AEA025FE7E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A20CF2C-F071-A3AF-A830-46EBE676D794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A20CF2C-F071-A3AF-A830-46EBE676D794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A20CF2C-F071-A3AF-A830-46EBE676D794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A20CF2C-F071-A3AF-A830-46EBE676D794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C9320C-F32E-373B-3A09-4B0AF453FA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C9320C-F32E-373B-3A09-4B0AF453FA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C9320C-F32E-373B-3A09-4B0AF453FA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C9320C-F32E-373B-3A09-4B0AF453FA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F3FDD2-C79F-90E6-7D7C-B1AC5E2D72A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F3FDD2-C79F-90E6-7D7C-B1AC5E2D72A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F3FDD2-C79F-90E6-7D7C-B1AC5E2D72A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F3FDD2-C79F-90E6-7D7C-B1AC5E2D72A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

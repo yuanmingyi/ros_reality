@@ -46,6 +46,6 @@ public class DepthImageListener : MonoBehaviour {
 		texture.Apply ();
 
 		material.SetPass(0);
-		Graphics.DrawProcedural (MeshTopology.Points, width * height, 1);
+		Graphics.DrawProceduralNow (MeshTopology.Points, width * height, 1);
 	}
 }
