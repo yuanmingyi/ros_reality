@@ -21,7 +21,7 @@ using UnityEngine;
 namespace RosSharp.RosBridgeClient
 {
     [RequireComponent(typeof(RosConnector))]
-    public class RawImageSubscriber : UnitySubscriber<MessageTypes.Sensor.Image>
+    public class RawImageSubscriber : UnitySubscriber<MessageTypes.Sensor.Image>, IImageSubscriber
     {
         public int imageWidth = 512;
         public int imageHeight = 424;
@@ -30,6 +30,11 @@ namespace RosSharp.RosBridgeClient
 
         private byte[] imageData;
         private bool isMessageReceived;
+
+        public string TexName
+        {
+            get { return texName; }
+        }
 
         public Texture2D Texture2D
         {

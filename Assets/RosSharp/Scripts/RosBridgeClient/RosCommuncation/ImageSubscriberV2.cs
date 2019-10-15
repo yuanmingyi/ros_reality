@@ -21,11 +21,16 @@ using UnityEngine;
 namespace RosSharp.RosBridgeClient
 {
     [RequireComponent(typeof(RosConnector))]
-    public class ImageSubscriberV2 : UnitySubscriber<MessageTypes.Sensor.CompressedImage>
+    public class ImageSubscriberV2 : UnitySubscriber<MessageTypes.Sensor.CompressedImage>, IImageSubscriber
     {
         public string texName;
         private byte[] imageData;
         private bool isMessageReceived;
+
+        public string TexName
+        {
+            get { return texName; }
+        }
 
         public Texture2D Texture2D
         {
