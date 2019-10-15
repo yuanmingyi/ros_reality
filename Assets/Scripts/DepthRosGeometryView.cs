@@ -11,14 +11,14 @@ public class DepthRosGeometryView : MonoBehaviour {
     private const int _imageWidth = 512;
     private const int _imageHeight = 424;
 
+    public WebsocketClient _wsc;
     public int Framerate = 100;
     public string Compression = "none"; //"png" is the other option, haven't tried it yet though
     public Material Material;
-    
+
     private Texture2D _depthTexture;
     private Texture2D _colorTexture;
 
-    private WebsocketClient _wsc;
     private Matrix4x4 _m;
 
     public void CheckMessages()
@@ -42,7 +42,6 @@ public class DepthRosGeometryView : MonoBehaviour {
         _depthTexture = new Texture2D(_imageWidth, _imageHeight, TextureFormat.R16, false);
         _colorTexture = new Texture2D(2, 2);
 
-        _wsc = GameObject.Find("WebsocketClient").GetComponent<WebsocketClient>();
         _wsc.Subscribe(DEPTH_TOPIC, "sensor_msgs/Image", Compression, Framerate);
         _wsc.Subscribe(COLOR_TOPIC, "sensor_msgs/CompressedImage", Compression, Framerate);
         StartCoroutine(UpdateKinectTexture());
