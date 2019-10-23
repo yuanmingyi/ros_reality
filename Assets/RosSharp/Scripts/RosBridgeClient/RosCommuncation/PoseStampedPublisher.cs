@@ -26,6 +26,7 @@ namespace RosSharp.RosBridgeClient
 
         protected override void Start()
         {
+            Debug.Log("PoseStampedPublisher.Start()");
             base.Start();
             InitializeMessage();
         }

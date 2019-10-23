@@ -50,6 +50,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/Menu",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -81,6 +85,54 @@
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/robot/in/Mode",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Grip",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Trigger",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Squeeze",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/robot/in/Stearing",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/robot/in/Teleport",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Up",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Down",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Left",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/Right",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/in/System",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/robot/out/Haptic",
+      "type": "vibration"
     }
   ],
   "action_sets": [
@@ -98,6 +150,10 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/robot",
       "usage": "single"
     }
   ],

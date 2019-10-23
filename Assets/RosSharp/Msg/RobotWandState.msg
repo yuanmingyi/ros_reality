@@ -1,0 +1,12 @@
+Header header
+uint8 mode
+uint8 grip
+uint8 trigger
+float32 squeeze
+float32[] stearing
+uint8 teleport
+uint8 up
+uint8 down
+uint8 left
+uint8 right
+uint8 system

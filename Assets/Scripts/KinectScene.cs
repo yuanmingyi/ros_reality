@@ -1,54 +1,62 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
+using System;
+using RosSharp.RosBridgeClient;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR;
-using Valve.VR;
 
 public class KinectScene : MonoBehaviour
 {
-    public GameObject FollowingObject;
-    public bool StickToCamera;
+    public Material material;
+    public int imageWidth = 512;
+    public int imageHeight = 424;
+    public GameObject rosConnector;
+    public bool isFollowing;
+    public Transform followingTarget;
 
-    // Start is called before the first frame update
-    void Start()
+    private List<IImageSubscriber> subscribers;
+
+    public void Reset()
     {
+        transform.position = followingTarget.transform.position;
+        transform.rotation = followingTarget.transform.rotation;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        bool reset = false;
-        //if (SteamVR_Actions._default.GrabPinch.GetState(SteamVR_Input_Sources.Any))
-        //{
-        //    // send pose message to the ros
-        //    var location = SteamVR_Actions._default.Pose.localPosition;
-        //    var rotation = SteamVR_Actions._default.Pose.localRotation;
-        //    Debug.Log($"location: {location}, rotation: {rotation}");
-        //}
-        if (SteamVR_Actions._default.Teleport.GetState(SteamVR_Input_Sources.Any))
+    // Use this for initialization
+    void Start() {
+        subscribers = new List<IImageSubscriber>();
+        foreach (var subscriber in rosConnector.GetComponents<RawImageSubscriber>())
         {
-            Debug.Log("Teleport!");
-            reset = true;
+            if (subscriber.enabled)
+            {
+                subscribers.Add(subscriber);
+            }
         }
-        else if (Input.GetKey(KeyCode.H))
+        foreach (var subscriber in rosConnector.GetComponents<ImageSubscriberV2>())
         {
-            Debug.Log("H key is Pressed Down");
-            reset = true;
-        }
-        else if (Input.GetKey(KeyCode.Return))
-        {
-            Debug.Log("Return key is Pressed Down");
-            StickToCamera = !StickToCamera;
-        }
-        if (reset || StickToCamera)
-        {
-            ResetToFollowingObject();
+            if (subscriber.enabled)
+            {
+                subscribers.Add(subscriber);
+            }
         }
     }
 
-    private void ResetToFollowingObject()
+    void LateUpdate()
     {
-        transform.position = FollowingObject.transform.position;
-        transform.rotation = FollowingObject.transform.rotation;
+        if (isFollowing)
+        {
+            Reset();
+        }
+    }
+
+    void OnRenderObject()
+    {
+        foreach (var subscriber in subscribers)
+        {
+            material.SetTexture(subscriber.TexName, subscriber.Texture2D);
+        }
+        material.SetPass(0);
+        Matrix4x4 mat = Matrix4x4.TRS(transform.position, transform.rotation, transform.localScale);
+        material.SetMatrix("transformationMatrix", mat);
+        Graphics.DrawProceduralNow(MeshTopology.Points, imageWidth * imageHeight, 1);
     }
 }
