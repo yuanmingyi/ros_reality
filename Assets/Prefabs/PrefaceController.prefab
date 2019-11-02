@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7912932366702271993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7912932366702271992}
+  - component: {fileID: 7912932366702271991}
+  m_Layer: 0
+  m_Name: SceneStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7912932366702271992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912932366702271993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.039999723, y: 3.496602, z: 6.483231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7912932366702271991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912932366702271993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a49ac236ee7f06449fac088a85a977c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefaceText: {fileID: 0}
+  inputSource: 0
+  prefaceWords:
+  - Hi! Welcome to IQR VR world! From here you can see the view which comes from Caster
+    robot head camera. There's a trigger on your right hand controller, pull the trigger
+    to get next.
+  - To get better experience, there's a mission for you. Pull the trigger to get next.
+  - After this hint, you will get a view which comes from Caster head camera. You
+    can  look around, and use left hand controller to control Caster head. When you
+    want to start the mission, please press the MISSION button on your right hand
+    controller.
+  referring: {fileID: 0}
+  world: {fileID: 0}

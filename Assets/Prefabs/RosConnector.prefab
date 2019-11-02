@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6395802601957075856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6395802601957075855}
+  - component: {fileID: 6395802601957075854}
+  - component: {fileID: 6395802601957075848}
+  - component: {fileID: 6395802601957075851}
+  - component: {fileID: 6395802601957075850}
+  - component: {fileID: 6395802601957075852}
+  - component: {fileID: 6395802601957075853}
+  - component: {fileID: 6395802601957075845}
+  - component: {fileID: 6395802601957075846}
+  - component: {fileID: 6395802601957075847}
+  - component: {fileID: 6395802601957075849}
+  - component: {fileID: 6395802601957075844}
+  m_Layer: 0
+  m_Name: RosConnector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6395802601957075855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6395802601957075854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98778ae051cfd40a6e4effdf851ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SecondsTimeout: 10
+  Serializer: 0
+  protocol: 0
+  RosBridgeServerUrl: ws://192.168.33.5:9090
+--- !u!114 &6395802601957075848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116429a41d9568f4cab88c757a2f6b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /kinect2/sd/image_depth_rect/compressed
+  TimeStep: 0.1
+  texName: _MainTex
+--- !u!114 &6395802601957075851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116429a41d9568f4cab88c757a2f6b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /kinect2/sd/image_color_rect/compressed
+  TimeStep: 0.1
+  texName: _ColorTex
+--- !u!114 &6395802601957075850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728e561a678d52e42a15d2594631d558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /kinect2/sd/image_depth_rect
+  TimeStep: 0.1
+  imageWidth: 512
+  imageHeight: 424
+  texName: _MainTex
+  textureFormat: 9
+--- !u!114 &6395802601957075852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa23b622c60c13f48bdfa74b2e974f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /left_hand_pose
+  PublishedTransform: {fileID: 0}
+  FrameId: Unity
+--- !u!114 &6395802601957075853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa23b622c60c13f48bdfa74b2e974f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /right_hand_pose
+  PublishedTransform: {fileID: 0}
+  FrameId: Unity
+--- !u!114 &6395802601957075845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7c10a4ace711d4b85fe17279d31be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /left_robot_wand_state
+  inputSource: 1
+  FrameId: Unity
+--- !u!114 &6395802601957075846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7c10a4ace711d4b85fe17279d31be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /right_robot_wand_state
+  inputSource: 2
+  FrameId: Unity
+--- !u!114 &6395802601957075847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9ee6f5ff22425418e90c1fe40f1d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /left_default_wand_state
+  inputSource: 1
+  FrameId: Unity
+--- !u!114 &6395802601957075849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9ee6f5ff22425418e90c1fe40f1d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /right_default_wand_state
+  inputSource: 2
+  FrameId: Unity
+--- !u!114 &6395802601957075844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395802601957075856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa23b622c60c13f48bdfa74b2e974f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /head_pose
+  PublishedTransform: {fileID: 0}
+  FrameId: Unity
