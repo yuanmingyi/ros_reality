@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 14cdafe3ce86a1c498ac45b81ba2d1e5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.03188064, g: 0.06911231, b: 0.09636435, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2650,15 +2650,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.006799999
       objectReference: {fileID: 0}
-    - target: {fileID: 4866374608644423903, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
-        type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2407741384493069557, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
         type: 3}
       propertyPath: id
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866374608644423903, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6be6e7ad9c297664e897c968bdaa7e8c, type: 3}
@@ -3813,7 +3813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123
+  m_Text: 
 --- !u!222 &1216664797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4686,7 +4686,7 @@ PrefabInstance:
     - target: {fileID: 6395802601957075854, guid: f7e4a665f25d7d94a83efbaddde6afdd,
         type: 3}
       propertyPath: RosBridgeServerUrl
-      value: ws://192.168.33.6:9090
+      value: ws://192.168.33.5:9090
       objectReference: {fileID: 0}
     - target: {fileID: 6395802601957075852, guid: f7e4a665f25d7d94a83efbaddde6afdd,
         type: 3}
@@ -6408,15 +6408,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4866374607403418628, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2407741384493069557, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
         type: 3}
       propertyPath: id
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866374607403418628, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6be6e7ad9c297664e897c968bdaa7e8c, type: 3}
