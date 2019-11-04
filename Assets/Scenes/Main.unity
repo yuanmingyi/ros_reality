@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8433328885822874197}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945032860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e75fe4b0c190eb4ba97e59f062510e9, type: 3}
   m_Name: 
@@ -3279,7 +3279,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8433328885822874197}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161221462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e75fe4b0c190eb4ba97e59f062510e9, type: 3}
   m_Name: 
@@ -6532,6 +6532,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4049450204498642396, guid: b11602d8f8b172d4fa60757bf99679a5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4154443002739035542, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
       propertyPath: hapticAction.actionPath
@@ -6545,6 +6550,11 @@ PrefabInstance:
     - target: {fileID: 4154443002731919242, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049450259057686010, guid: b11602d8f8b172d4fa60757bf99679a5,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4154443002738986248, guid: b11602d8f8b172d4fa60757bf99679a5,
