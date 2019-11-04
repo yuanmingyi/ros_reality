@@ -952,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89975b142c3745941aac6d7cb1442255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 901798412}
 --- !u!114 &387084250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,7 +1052,7 @@ MonoBehaviour:
   flashColor: {r: 1, g: 0.9170069, b: 0.453, a: 0.709}
   textHintPrefab: {fileID: 140952, guid: 5fa42bb9e52706a42b8a1eaf0b54326a, type: 3}
   hapticFlash:
-    actionPath: 
+    actionPath: /actions/default/out/Haptic
     needsReinit: 1
   autoSetWithControllerRangeOfMotion: 0
   debugHints: 0
@@ -1383,7 +1384,7 @@ MonoBehaviour:
   flashColor: {r: 1, g: 0.9170069, b: 0.453, a: 0.709}
   textHintPrefab: {fileID: 140952, guid: 5fa42bb9e52706a42b8a1eaf0b54326a, type: 3}
   hapticFlash:
-    actionPath: 
+    actionPath: /actions/default/out/Haptic
     needsReinit: 1
   autoSetWithControllerRangeOfMotion: 0
   debugHints: 0
@@ -2307,7 +2308,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
   hapticAction:
-    actionPath: 
+    actionPath: /actions/default/out/Haptic
     needsReinit: 1
   uiInteractAction:
     actionPath: /actions/default/in/InteractUI
@@ -3348,7 +3349,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
   hapticAction:
-    actionPath: 
+    actionPath: /actions/default/out/Haptic
     needsReinit: 1
   uiInteractAction:
     actionPath: /actions/default/in/InteractUI
@@ -4579,7 +4580,7 @@ MonoBehaviour:
   menu: Skip
   squeeze: 
   grabGrip: Next
-  grabPinch: Restart
+  grabPinch: 
   snapTurnLeft: 
   snapTurnRight: 
   leftHand: {fileID: 1161221466}
@@ -6440,7 +6441,7 @@ PrefabInstance:
     - target: {fileID: 4154443002738940400, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
       propertyPath: hapticFlash.actionPath
-      value: 
+      value: /actions/default/out/Haptic
       objectReference: {fileID: 0}
     - target: {fileID: 4154443002738940400, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
@@ -6455,7 +6456,7 @@ PrefabInstance:
     - target: {fileID: 4154443002738947512, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
       propertyPath: hapticFlash.actionPath
-      value: 
+      value: /actions/default/out/Haptic
       objectReference: {fileID: 0}
     - target: {fileID: 4154443002738947512, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
@@ -6540,7 +6541,7 @@ PrefabInstance:
     - target: {fileID: 4154443002739035542, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
       propertyPath: hapticAction.actionPath
-      value: 
+      value: /actions/default/out/Haptic
       objectReference: {fileID: 0}
     - target: {fileID: 4154443002739035542, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
@@ -6565,7 +6566,7 @@ PrefabInstance:
     - target: {fileID: 4154443002738986248, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}
       propertyPath: hapticAction.actionPath
-      value: 
+      value: /actions/default/out/Haptic
       objectReference: {fileID: 0}
     - target: {fileID: 4154443002731643912, guid: b11602d8f8b172d4fa60757bf99679a5,
         type: 3}

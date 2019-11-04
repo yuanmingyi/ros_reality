@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class GlobalController : MonoBehaviour
 {
+    public Player player;
+
     private WorldController[] controllers;
 
     // Start is called before the first frame update
@@ -14,6 +17,8 @@ public class GlobalController : MonoBehaviour
         controllers = FindObjectsOfType<WorldController>();
         var sceneSwitch = GetComponent<SceneSwitch>();
         sceneSwitch.GotoPrefaceWorld();
+        player.leftHand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithController);
+        player.rightHand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithController);
     }
 
     // Update is called once per frame
