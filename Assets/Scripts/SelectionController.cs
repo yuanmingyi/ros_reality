@@ -35,7 +35,6 @@ public class SelectionController : WorldController
     public override void OnLoad()
     {
         base.OnLoad();
-        _hasSelected = false;
     }
 
     public override void OnUnload()
@@ -50,6 +49,7 @@ public class SelectionController : WorldController
         {
             button.OnUnselect();
         }
+        _hasSelected = false;
     }
 
     public override void HandleInput()

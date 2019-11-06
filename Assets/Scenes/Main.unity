@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button6
       objectReference: {fileID: 0}
+    - target: {fileID: 4866374608644423896, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4866374608644423897, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3066,6 +3071,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button5
       objectReference: {fileID: 0}
+    - target: {fileID: 4866374608644423896, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4866374608644423897, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4988,6 +4998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button2
       objectReference: {fileID: 0}
+    - target: {fileID: 4866374608644423896, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4866374608644423897, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6303,6 +6318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866374608644423896, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4866374608644423897, guid: 6be6e7ad9c297664e897c968bdaa7e8c,
         type: 3}
