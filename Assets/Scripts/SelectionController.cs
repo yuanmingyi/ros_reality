@@ -47,7 +47,10 @@ public class SelectionController : WorldController
         Debug.Log("Reset the selections");
         foreach (var button in buttons)
         {
-            button.OnUnselect();
+            if (button.isActiveAndEnabled)
+            {
+                button.OnUnselect();
+            }
         }
         _hasSelected = false;
     }

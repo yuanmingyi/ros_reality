@@ -69,18 +69,18 @@ public class SceneSwitch : MonoBehaviour
 
     public void ResetSelectionWorld()
     {
-        //ResetSelectionWorld(cameraTrans.position, cameraTrans.rotation);
-        //ResetSelectionWorld(_initialReferringPos, _initialReferringRotate);
+        ResetSelectionWorld(cameraTrans.position, cameraTrans.rotation);
+        ResetSelectionWorld(_initialReferringPos, _initialReferringRotate);
     }
 
     public void ResetKinectWorld()
     {
-        //ResetKinectWorld(_initialReferringPos, _initialReferringRotate);
+        ResetKinectWorld(_initialReferringPos, _initialReferringRotate);
     }
 
     public void ResetPrefaceWorld()
     {
-        //ResetPrefaceWorld(_initialReferringPos, _initialReferringRotate);
+        ResetPrefaceWorld(_initialReferringPos, _initialReferringRotate);
     }
 
     private void ResetSelectionWorld(Vector3 referringPos, Quaternion referringRotate)
