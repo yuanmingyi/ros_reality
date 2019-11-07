@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using RosSharp.RosBridgeClient;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class KinectScene : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class KinectScene : MonoBehaviour
     public int imageWidth = 512;
     public int imageHeight = 424;
     public GameObject rosConnector;
+    public Image kinectColor;
+
     //public bool isFollowing;
     //public Transform followingTarget;
 
@@ -53,6 +56,10 @@ public class KinectScene : MonoBehaviour
         foreach (var subscriber in subscribers)
         {
             material.SetTexture(subscriber.TexName, subscriber.Texture2D);
+            if (subscriber.TexName.Contains("Color") && kinectColor != null)
+            {
+                kinectColor.sprite = Sprite.Create(subscriber.Texture2D, new Rect(0, 0, imageWidth, imageHeight), Vector2.one / 2);
+            }
         }
         material.SetPass(0);
         Matrix4x4 mat = Matrix4x4.TRS(transform.position, transform.rotation, transform.localScale);
